@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="home.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   </head>
 <body>
 
@@ -17,23 +17,22 @@
     <div class="column">
         <a href="index.html">
       <img src="
-      https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov_blue.png" alt="Forest" class="zoomtva" style="width:50%">
+      https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov.png" alt="Forest" class="zoomtva" style="width:50%">
         </a>
     </div>
     <div class="column">
-      <a href="salen_index.html">
-      <img src="https://uploads.staticjw.com/ta/tackochlovgotland/tolsalenpng.png" alt="Mountains" class="zoomtre" style="width:50%">
-      </a>
+      <img src="https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov_salen_pink.png" alt="Mountains" class="zoomtre" style="width:50%">
     </div>
   </div>
-  <ul class="nav">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/work/">Webshop</a></li>
-    <li><a href="/contact/">Contact</a></li>
-  </ul>
+  <section id="section2">
+    <ul class="nav">
+      <li><a href="/">Hem</a></li>
+      <li><a href="salen_omoss.html">Om oss</a></li>
+      <li><a href="/work/">Webshop</a></li>
+      <li><a href="/contact/">Kontakt</a></li>
+    </ul>
+    </section>
 </header>
-
 <div class="slideshow-container">
 
   <div class="mySlides fade">
@@ -62,8 +61,43 @@
   </div>
     <br>
 <div class="roligt">
-    <iframe src="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Falvatackenstrom%3Figshid%3DYmMyMTA2M2Y%253D%26fbclid%3DIwAR0M1Oo_nlcYF2_ildUJqWtuHRurXcmh2xxHRHixK5qxdU87s2FsYbnNeag&h=AT2ORiHDkdZ0y1a8G6b8hfFpxh_Bu6XnvOFJcxdlKcDk2eH3mbuf1ulU7LHRJixT70YelceMJVYJZHDuDzcMHeSE3rmi4MexkA9URz3K9or7yPN5hRVyo_R9rBTo4b6D-MvVNpDvkN7ilDlCcwo" width="104%" height="1000"></iframe>
+    <iframe src="salen_oppettider.html" width="104%" height="500"></iframe>
   </div>
+
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3></h3>
+          <div class="stickyicon-list">  
+            <a href="#facebook" class="facebook">   
+            <i class="fa fa-facebook"></i>   
+            </a>
+            <a href="#instagram" class="instagram">   
+                <i class="fa fa-instagram"></i>   
+                </a>   
+            <a href="#twitter" class="twitter">   
+            <i class="fa fa-envelope"></i>   
+            </a>          
+            </div> 
+      </div>
+      <div class="footer-column">
+        <h3>Länkar</h3>
+        <ul>
+          <li><a href="#section2">Öppettider</a></li>
+          <li><a href="salen_omoss.html">Om oss</a></li>
+          <li><a href="salen_kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Column 3</h3>
+        <ul>
+          <li><a href="#">Link 7</a></li>
+          <li><a href="#">Link 8</a></li>
+          <li><a href="#">Link 9</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
     <script>
         let slideIndex = 0;
@@ -88,10 +122,18 @@
 
         </script>
 
-</body>
 </html>
 
 <style>
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+  .instagram_container {
+    text-align: center;
+  }
 
 .mobileHide { display: inline; } 
 
@@ -104,8 +146,9 @@
 
   body {
   overflow-x: hidden;
-  margin-left: -1%;
+  margin-left: -2%;
   }
+
 
 iframe {
 		border: none;
@@ -251,6 +294,59 @@ img {vertical-align: middle;}
   animation-duration: 1s;
 }
 
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+  height: 200px; /* adjust to match your footer height */
+  position: relative;
+  bottom: 0;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  width: 110%;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 110%;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+margin-left: 3%;
+  background-color: #fff;
+  padding-top: 1%;
+}
+
+h3 {
+  margin-bottom: 10px;
+  margin-left: -0.5%;
+  background-color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0%;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+a:hover {
+color:#7b5973;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -261,4 +357,52 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 
+/* Style the Sticky icons on web page */   
+.stickyicon-list {   
+position: fixed;   
+top: 89.5%;   
+transform: translateY(-50%);             
+}         
+.stickyicon-list a {   
+display: block;   
+text-align: center;   
+padding: 8px;   
+transition: all 0.2s ease;   
+color: white;   
+font-size: 20px;   
+}         
+/* HOver affect on sticky social media icons */   
+.stickyicon-list a:hover {   
+color: #000;  
+background-color: white; 
+width:0px;   
+}   
+   
+/* Now we have to design each icon of social media */         
+.facebook {   
+background: #3b5998;   
+color: white;  
+}         
+.twitter {   
+color: white;   
+background: #7b5973;   
+}   
+.linkedin {   
+background: #0e76a8;   
+color: white;   
+}         
+.google {   
+color: white;   
+background: #db4a39;   
+}   
+.instagram {   
+  background: rgb(221, 46, 119); 
+color: white;   
+}         
+.youtube {   
+color: white;   
+background: #7b5973;    
+}
+
 </style>
+</body>
