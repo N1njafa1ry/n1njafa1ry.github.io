@@ -1,30 +1,57 @@
     <div class="container">
-        <img src="https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov_salen_pink.png" style="border-right:4px solid rgb(22, 22, 22);" /> 
+        <img src="https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov_salen_pink.png" /> 
         <div class="openh">
-        <h1 style="text-align: center; color: #7b5973;">ÖPPETTIDER</h1>
+        <h1>ÖPPETTIDER</h1>
         <h3>Måndag-Fredag <br> 10.00-18.00 <br><br> Lördag <br> 10.00-14.00 <br><br> Söndag <br> STÄNGT</h3>
       </div>
 </div>
-      <style>
-        .openh {
-            text-align: center;
-margin-top: 4%;
-margin-left: -2%;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
+<style>
+  .openh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex: 1;
+  }
 
-        .h3 {
-text-align: left;
-        }
-    
-.container {
-  display: flex;
-}
+  .openh h1 {
+    color: #7b5973;
+    font-size: 3em;
+  }
 
-img {
-    width: 42%;
-  margin-right: 15%;
-  padding-left: 2%;
-  padding-right: 3.5%;
-}
-      </style>
+  .openh h3 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+  }
+
+  img {
+    width: 50%;
+    max-width: 500px;
+    margin-right: 0;
+    border-right: 4px solid rgb(22, 22, 22);
+  }
+
+  @media (max-width: 1120px) {
+    .container {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    img {
+      width: 100%;
+      margin-right: 0;
+      padding: 0;
+      border-right: none;
+    }
+  }
+</style>

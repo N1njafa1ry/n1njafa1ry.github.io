@@ -2,52 +2,57 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 <body>
 
 <header>
-  <div class="row">
-    <div class="column">
-      <a href="gotland_index.html">
-      <img src="
-      https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov_gotland_green.png" alt="Snow" class="zoomett" style="width:50%">
-    </a>
-    </div>
-    <div class="column">
-        <a href="index.html">
-      <img src="
-      https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov.png" alt="Forest" class="zoomtva" style="width:50%">
+    <div class="row">
+        <div class="column">
+          <a href="gotland_index.html">
+          <img src="
+          https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov_gotland_green.png" alt="Snow" class="zoomett" style="width:50%">
         </a>
-    </div>
-    <a href="salen_index.html">
-    <div class="column">
-      <img src="https://uploads.staticjw.com/ta/tackochlovgotland/tolsalenpng.png" alt="Mountains" class="zoomtre" style="width:50%">
-    </a></div>
-  </div>
-  
+        </div>
+        <div class="column">
+            <a href="index.html">
+          <img src="
+          https://uploads.staticjw.com/ta/tackochlovgotland/tackochlov.png" alt="Forest" class="zoomtva" style="width:50%">
+            </a>
+        </div>
+        <a href="salen_index.html">
+        <div class="column">
+          <img src="https://uploads.staticjw.com/ta/tackochlovgotland/tolsalenpng.png" alt="Mountains" class="zoomtre" style="width:50%">
+        </a></div>
+      </div>
   <div class="menu-icon">
     <li class="toggle-nav"><a href="#"><i class="fa fa-bars"></i></a></li>
   </div>
     <ul class="nav">
-      <li><a href="gotland_index.html">Hem</a></li>
-      <li><a href="gotland_omoss.html">Om oss</a></li>
-      <li><a href="https://www.romaglasbruk.se/">Roma Glasbruk</a></li>
-      <li><a href="https://www.tackochlov.se/">Webshop</a></li>
-      <li><a href="gotland_kontakt.html">Kontakt</a></li>
+        <li><a href="gotland_index.html">Hem</a></li>
+        <li><a href="gotland_omoss.html">Om oss</a></li>
+        <li><a href="https://www.romaglasbruk.se/">Roma Glasbruk</a></li>
+        <li><a href="https://www.tackochlov.se/">Webshop</a></li>
+        <li><a href="gotland_kontakt.html">Kontakt</a></li>
     </ul>
-  </section>
 </header>
-<img class="full-width-image" src="https://uploads.staticjw.com/ta/tackochlovsalen/004_tol.jpg" alt="Full Width Image">
 
-    <br>
-    <br>
-<div class="roligt">
-    <iframe src="gotland_omoss_text_bild.html" width="102.5%" height="1000"></iframe>
-</div>
+  <div class="kontakta" style="width: 101%;">
+    <form id="contact-form" method="POST" action="send-contact.php" style="background-color: transparent;">
+      <h2>Kontakta oss</h2>
+      <label for="name">Namn</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Meddelande</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit" id="submit-btn">Skicka</button>
+      <div id="status"></div>
+    </form>
+  </div>
 
-<footer>
+  <footer>
     <div class="footer-columns">
       <div class="footer-column">
         <h3></h3>
@@ -66,9 +71,9 @@
       <div class="footer-column">
         <h3>Länkar</h3>
         <ul>
-          <li><a href="gotland_home.html">Öppettider</a></li>
-          <li><a href="gotland_omoss.html">Om oss</a></li>
-          <li><a href="gotland_kontakt.html">Kontakt</a></li>
+            <li><a href="gotland_home.html">Öppettider</a></li>
+            <li><a href="gotland_omoss.html">Om oss</a></li>
+            <li><a href="gotland_kontakt.html">Kontakt</a></li>
         </ul>
       </div>
       <div class="footer-column">
@@ -81,11 +86,45 @@
       </div>
     </div>
   </footer>
-  
 
     <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
 
-        const menuIcon = document.querySelector(".menu-icon");
+        $(document).ready(function() {
+  $('#contact-form').submit(function(event) {
+    event.preventDefault();
+    var formData = $(this).serialize();
+    $.ajax({
+      type: 'POST',
+      url: $(this).attr('action'),
+      data: formData,
+      success: function(response) {
+        $('#status').html(response);
+        $('#contact-form')[0].reset();
+      }
+    });
+  });
+});
+
+const menuIcon = document.querySelector(".menu-icon");
 const nav = document.querySelector(".nav");
 
 menuIcon.addEventListener("click", () => {
@@ -94,23 +133,99 @@ menuIcon.addEventListener("click", () => {
 
         </script>
 
-</body>
 </html>
 
 <style>
+  #contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  #contact-form h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #597b5d;
+  }
+  
+  #contact-form label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  #contact-form textarea {
+    height: 150px;
+  }
+  
+  #submit-btn {
+    background-color: #597b5d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #submit-btn:hover {
+    background-color: #6c9671;
+  }
+  
+  #status {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .instagram_container {
+    text-align: center;
+  }
 
   body {
   overflow-x: hidden;
   margin-left: -2%;
   }
 
-  iframe {
+
+iframe {
 		border: none;
     margin-left: -8px;
     margin-right: -4px;
     overflow: hidden;
-    margin-top: 3%;
+    margin-top: -5%;
+    width: 104%;
+    height: 700px;
 	}
+
+  @media (max-width: 1120px) {
+    iframe {
+		border: none;
+    margin-left: -8px;
+    margin-right: -4px;
+    overflow: hidden;
+    margin-top: -5%;
+    width: 104%;
+    height: 1200px;
+	}
+  }
+
+header {
+  background-image: url(https://www.canva.com/design/DAFZdXrSskc/7qdh3wcreahjVx-8Z7n8rA/watch?utm_content=DAFZdXrSskc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink);
+}
 
 * {
   box-sizing: border-box;
@@ -151,7 +266,6 @@ menuIcon.addEventListener("click", () => {
   -webkit-transform: scale(1.4); /* Safari 3-8 */
   transform: scale(1.4); 
 }
-
 
 .zoomtva {
   padding-left: 10px;
@@ -255,26 +369,28 @@ color: rgb(255, 253, 253);
 text-decoration: none;
 }
 
-.full-width-image {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-  }
-
-.roligt {
-  margin-top: -3.4%;
-}
-
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;} 
 
+/* Slideshow container */
+.slideshow-container {
+  min-width: 101%;
+  position: relative;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
 .active {
   background-color: transparent;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
 }
 
 footer {
@@ -384,7 +500,8 @@ color: white;
 }         
 .youtube {   
 color: white;   
-background: #c4302b;    
-}   
+background: #597b5d;    
+}
 
 </style>
+</body>

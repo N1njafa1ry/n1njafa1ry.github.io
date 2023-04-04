@@ -2,14 +2,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="home.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 <body>
 
 <header>
   <div class="row">
     <div class="column">
-      <a href="gotland_home.html">
+      <a href="gotland_index.html">
       <img src="
       https://uploads.staticjw.com/ta/tackochlovgotland/tack-o-lov-gotland.png" alt="Snow" class="zoomett" style="width:50%">
     </a>
@@ -26,85 +27,130 @@
       </a>
     </div>
   </div>
+  <div class="menu-icon">
+    <li class="toggle-nav"><a href="#"><i class="fa fa-bars"></i></a></li>
+  </div>
   <ul class="nav">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/work/">Webshop</a></li>
-    <li><a href="/contact/">Contact</a></li>
+    <li><a href="index.html">Hem</a></li>
+    <li><a href="omoss.html">Om oss</a></li>
+    <li><a href="https://www.tibroglasverkstad.se/">Tibro Glasverkstad</a></li>
+    <li><a href="https://www.tackochlov.se/">Webshop</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
 </header>
 
 <div class="slideshow-container">
 
   <div class="mySlides fade">
-    <div class="numbertext"></div>
-    <img src="https://uploads.staticjw.com/ta/tackochlovgotland/water001.jpg" style="width:110%">
-    <div class="text"></div>
+    <img src="https://uploads.staticjw.com/ta/tackochlovsalen/004_tol.jpg" style="width:101%">
   </div>
   
   <div class="mySlides fade">
-    <div class="numbertext"></div>
-    <img src="https://uploads.staticjw.com/ta/tackochlovgotland/ledklot002.jpg" style="width:110%">
-    <div class="text"></div>
+    <img src="https://uploads.staticjw.com/ta/tackochlovsalen/003_tol.jpg" style="width:101%">
   </div>
   
   <div class="mySlides fade">
-    <div class="numbertext"></div>
-    <img src="https://uploads.staticjw.com/ta/tackochlovgotland/testanagotnytt.jpg" style="width:110%">
-    <div class="text"></div>
+    <img src="https://uploads.staticjw.com/ta/tackochlovsalen/testkenneth_001.jpg" style="width:101%">
   </div>
-  <br>
-  <div style="text-align:center">
+  <div style="text-align:center;display: none;">
       <span class="dot"></span> 
       <span class="dot"></span> 
       <span class="dot"></span> 
     </div>
   </div>
-    <br>
-<div class="roligt">
-    <iframe src="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Falvatackenstrom%3Figshid%3DYmMyMTA2M2Y%253D%26fbclid%3DIwAR0M1Oo_nlcYF2_ildUJqWtuHRurXcmh2xxHRHixK5qxdU87s2FsYbnNeag&h=AT2ORiHDkdZ0y1a8G6b8hfFpxh_Bu6XnvOFJcxdlKcDk2eH3mbuf1ulU7LHRJixT70YelceMJVYJZHDuDzcMHeSE3rmi4MexkA9URz3K9or7yPN5hRVyo_R9rBTo4b6D-MvVNpDvkN7ilDlCcwo" width="104%" height="1000"></iframe>
+<br>
+    <div class="soon">
+      <br>
+      <br>
+      <br>
+      Content will come soon
+    </div>
+    
+    
+
+  
+<footer>
+  <div class="footer-columns">
+    <div class="footer-column">
+      <h3></h3>
+        <div class="stickyicon-list">  
+          <a href="#facebook" class="facebook">   
+          <i class="fa fa-facebook"></i>   
+          </a>
+          <a href="#instagram" class="instagram">   
+              <i class="fa fa-instagram"></i>   
+              </a>   
+          <a href="#twitter" class="twitter">   
+          <i class="fa fa-envelope"></i>   
+          </a>          
+          </div> 
+    </div>
+    <div class="footer-column">
+      <h3>Länkar</h3>
+      <ul>
+        <li><a href="https://www.tackochlov.se/">Öppettider</a></li>
+        <li><a href="omoss.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Column 3</h3>
+      <ul>
+        <li><a href="#">Link 7</a></li>
+        <li><a href="#">Link 8</a></li>
+        <li><a href="#">Link 9</a></li>
+      </ul>
+    </div>
   </div>
+</footer>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
-        
-        function showSlides() {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 4000); // Change image every 4 seconds
-        }
+<script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+  }
 
-        </script>
+  const menuIcon = document.querySelector(".menu-icon");
+const nav = document.querySelector(".nav");
+
+menuIcon.addEventListener("click", () => {
+  nav.classList.toggle("showing");
+});
+
+
+  </script>
+  
 
 </body>
 </html>
 
 <style>
 
-.mobileHide { display: inline; } 
-
-/* Smartphone Portrait and Landscape */ 
-@media only screen 
-  and (min-device-width : 320px) 
-  and (max-device-width : 480px){ 
-   .mobileHide { display: none;}
-}
+  .soon {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    height: 500px;
+  }
 
   body {
   overflow-x: hidden;
-  margin-left: -1%;
+  margin-left: -2%;
   }
 
 iframe {
@@ -114,10 +160,6 @@ iframe {
     overflow: hidden;
     margin-top: -5%;
 	}
-
-header {
-  background-image: url(https://www.canva.com/design/DAFZdXrSskc/7qdh3wcreahjVx-8Z7n8rA/watch?utm_content=DAFZdXrSskc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink);
-}
 
 * {
   box-sizing: border-box;
@@ -159,9 +201,6 @@ header {
   transform: scale(1.4); 
 }
 
-.zoomett:active {
-
-}
 
 .zoomtva {
   padding-left: 10px;
@@ -193,28 +232,66 @@ header {
   transform: scale(1.4); 
 }
 
-.nav{
-    border:1px solid rgb(22, 22, 22);
-    border-width:4px 0;
-    list-style:none;
-    margin: 0;
-    padding-right: 4%;
-    text-align:center;
-    width: 101%;
-    overflow: hidden;
+.menu-icon {
+  display: none;
 }
-.nav li{
-    display:inline;
-    padding-right: 2px;
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nav a{
-    display:inline-block;
-    padding:8px;
+
+.nav li {
+  padding-right: 2px;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 8px;
+  color: rgb(29, 29, 29);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    margin-left: 0.5%;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    z-index: 9999;
+    margin-left: 2%;
+    margin-top: -0.5%;
+  }
+  .nav li {
+    padding: 15px 0;
+    border-bottom: 1px solid transparent;
+    padding-right: 5%;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 10px 15px; /* Increase padding for more visual effect */
     color: rgb(29, 29, 29);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     text-decoration: none;
+    border-radius: 5px; /* Add border radius */
+  
+  }
+  .showing {
+    display: flex;
+  }
 }
+
 a:hover {
 background-color: transparent;
 color: rgb(255, 253, 253);
@@ -229,15 +306,16 @@ text-decoration: none;
 
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
+.mySlides {display:none;}
 img {vertical-align: middle;} 
+
 
 /* Slideshow container */
 .slideshow-container {
   min-width: 101%;
   position: relative;
   margin: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: #000000;
   overflow: hidden;
 }
 
@@ -245,20 +323,132 @@ img {vertical-align: middle;}
   background-color: transparent;
 }
 
+
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1s;
+  animation: fade 4s ease-in-out;
+}
+
+.instagram_container {
+    text-align: center;
+  }
+
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+  height: 200px; /* adjust to match your footer height */
+  position: relative;
+  bottom: 0;
+  border-top: 4px solid black;
+  width: 110%;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 110%;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+margin-left: 3%;
+  background-color: #fff;
+  padding-top: 1%;
+}
+
+h3 {
+  margin-bottom: 10px;
+  margin-left: -0.5%;
+  background-color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0%;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+a:hover {
+color:#597b5d;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  0% {
+    opacity: 0;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  66.66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+/* Style the Sticky icons on web page */   
+.stickyicon-list {   
+position: fixed;   
+top: 89.5%;   
+transform: translateY(-50%);             
+}         
+.stickyicon-list a {   
+display: block;   
+text-align: center;   
+padding: 8px;   
+transition: all 0.2s ease;   
+color: white;   
+font-size: 20px;   
+}         
+/* HOver affect on sticky social media icons */   
+.stickyicon-list a:hover {   
+color: #000;  
+background-color: white; 
+width:0px;   
+}   
+   
+/* Now we have to design each icon of social media */         
+.facebook {   
+background: #3b5998;   
+color: white;  
+}         
+.twitter {   
+color: white;   
+background: #597b5d;   
+}   
+.linkedin {   
+background: #0e76a8;   
+color: white;   
+}         
+.google {   
+color: white;   
+background: #db4a39;   
+}   
+.instagram {   
+  background: rgb(221, 46, 119); 
+color: white;   
+}         
+.youtube {   
+color: white;   
+background: #c4302b;    
+}   
 
 </style>
